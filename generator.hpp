@@ -18,8 +18,8 @@ namespace iorate { namespace egg {
         template <class Lam, class Cons>
         struct aux_
         {
-            typedef
-                typename detail::if_use_default<Cons, X_construct_braced1<>>::type
+            typedef typename
+                detail::if_use_default<Cons, X_construct_braced1<>>::type
             cons_t;
 
             template <class ...Args, class T = typename boost::mpl::apply<Lam, Args...>::type>
