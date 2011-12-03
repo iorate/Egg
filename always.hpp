@@ -2,9 +2,9 @@
 #define IORATE_EGG_ALWAYS_HPP
 
 
+#include <memory>
 #include <type_traits>
 #include <boost/mpl/placeholders.hpp>
-#include "./addressof.hpp"
 #include "./generator.hpp"
 
 
@@ -61,7 +61,7 @@ namespace iorate { namespace egg {
         template <class T>
         constexpr always_ref_detail::result_<T> operator()(T &t) noexcept
         {
-            return { egg::addressof(t) };
+            return { std::addressof(t) };
         }
     };
 
