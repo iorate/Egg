@@ -25,8 +25,8 @@ namespace iorate { namespace egg {
 
     struct T_do_swap
     {
-        template <class T1, class T2>
-        void operator()(T1 &x, T2 &y) const noexcept(noexcept(do_swap_detail::call_aux(x, y)))
+        template <class T>
+        void operator()(T &x, T &y) const noexcept(noexcept(do_swap_detail::call_aux(x, y)))
         {
             do_swap_detail::call_aux(x, y);
         }
