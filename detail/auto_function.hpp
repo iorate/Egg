@@ -11,7 +11,7 @@
     /**/
 
 #define IORATE_EGG_AUTO_FUNCTION_II(...) \
-    -> decltype((IORATE_EGG_AUTO_FUNCTION_HELPER_ ## __VA_ARGS__)) \
+    -> decltype(IORATE_EGG_AUTO_FUNCTION_HELPER_ ## __VA_ARGS__) \
     { \
         __VA_ARGS__; \
     } \
